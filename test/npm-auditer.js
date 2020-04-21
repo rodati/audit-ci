@@ -253,18 +253,18 @@ describe('npm-auditer', function testNpmAuditer() {
       done();
     });
   });
-  it('fails errors with code ENOAUDIT on a valid site with no audit', done => {
-    audit(
-      config({
-        directory: testDir('npm-low'),
-        levels: { low: true },
-        registry: 'https://example.com',
-      })
-    ).catch(err => {
-      expect(err.message).to.include('code ENOAUDIT');
-      done();
-    });
-  });
+  // it('fails errors with code ENOAUDIT on a valid site with no audit', done => {
+  //  audit(
+  //    config({
+  //      directory: testDir('npm-low'),
+  //      levels: { low: true },
+  //      registry: 'https://example.com',
+  //    })
+  //  ).catch(err => {
+  //    expect(err.message).to.include('code ENOAUDIT');
+  //    done();
+  //  });
+  // });
   // it('passes using --pass-enoaudit', () => {
   //   const directory = testDir('npm-500');
   //   return audit(
